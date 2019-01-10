@@ -90,7 +90,7 @@ abstract class AbstractAPI
      *
      * @return ModelInterface|mixed
      */
-    protected function parseResponse($response, string $operationId)
+    protected function parseResponse($response, $operationId)
     {
         $contents = (string)$response->getBody();
 

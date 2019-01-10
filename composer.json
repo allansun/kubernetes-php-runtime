@@ -1,0 +1,28 @@
+{
+  "name": "kubernetes/php-runtime",
+  "description": "Runtime for kubernetes/php-client",
+  "license": "MIT",
+  "keywords": [
+    "kubernetes",
+    "docker",
+    "runtime"
+  ],
+  "authors": [
+    {
+      "name": "Allan Sun",
+      "email": "allan.sun@bricre.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.1",
+    "guzzlehttp/guzzle": "~6.0",
+    "monolog/monolog": "@stable",
+    "symfony/property-info": "~4"
+  },
+  "autoload": {
+    "psr-4": {
+      "KubernetesRuntime\\": "src"
+    }
+  },
+  "prefer-stable": true
+}

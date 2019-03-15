@@ -15,7 +15,7 @@ final class Middleware
         return function (callable $handler) {
             return function (RequestInterface $request, array $options) use ($handler) {
                 $modify = [];
-                if ('patch' == $request->getMethod()) {
+                if ('PATCH' == $request->getMethod()) {
                     $requestBody = json_decode($request->getBody(), true);
                     if (null !== $requestBody && array_key_exists('patchOperation', $requestBody)) {
                         switch ($requestBody['patchOperation']) {

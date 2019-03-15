@@ -30,6 +30,11 @@ final class Middleware
                                 $contentType = APIPatchOperation::CONTENT_TYPE[APIPatchOperation::PATCH];
                                 break;
                         }
+
+                        unset($requestBody['patchOperation']);
+
+                        $modify['body'] = Psr7\stream_for(\GuzzleHttp\json_encode($requestBody));
+
                     } else {
                         $contentType = APIPatchOperation::CONTENT_TYPE[APIPatchOperation::PATCH];
                     }

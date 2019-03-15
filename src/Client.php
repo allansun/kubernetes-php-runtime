@@ -12,6 +12,7 @@ namespace KubernetesRuntime;
 
 use GuzzleHttp;
 use KubernetesRuntime\Exception\CommonException;
+use KubernetesRuntime\Guzzle\Middleware;
 use Psr\Log\LogLevel;
 
 class Client
@@ -97,6 +98,10 @@ class Client
                 LogLevel::DEBUG
             )
         );
+
+        // Set proper content-type for 'Patch' operation
+        $HandlerStack->push(Middleware::setPatchOperation(), 'setPatchOperationContentType');
+
         $defaultOptions['handler'] = $HandlerStack;
 
         $this->defaultOptions = array_merge($defaultOptions, $guzzleOptions);

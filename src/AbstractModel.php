@@ -190,8 +190,8 @@ abstract class AbstractModel implements ModelInterface
                     }
                 }
             }
-            $this->$index = $value;
         }
+        $this->$index = $value;
 
 
         return $this;

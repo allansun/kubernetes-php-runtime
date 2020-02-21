@@ -1,5 +1,5 @@
 {
-  "name": "kubernetes/php-runtime",
+  "name": "peterculak/kubernetes-php-runtime",
   "description": "Runtime for kubernetes/php-client",
   "license": "MIT",
   "keywords": [

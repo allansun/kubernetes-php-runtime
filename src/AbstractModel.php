@@ -156,7 +156,7 @@ abstract class AbstractModel implements ModelInterface
         if ($propertyTypes && isset($value)) {
             if (is_array($value)) {
                 $countValue = count($value);
-            } elseif (is_string($value) || is_integer($value)) {
+            } elseif (is_string($value) || is_integer($value) || is_object($value)) {
                 $countValue = 1;
             }
         }

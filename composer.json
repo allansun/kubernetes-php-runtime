@@ -15,13 +15,22 @@
   ],
   "require": {
     "php": ">=7.1",
+    "ext-json": "*",
     "guzzlehttp/guzzle": "~6.0",
     "monolog/monolog": "@stable",
     "symfony/property-info": "~4"
   },
+  "require-dev": {
+    "phpunit/phpunit": "~9"
+  },
   "autoload": {
     "psr-4": {
       "KubernetesRuntime\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "KubernetesRuntime\\Tests\\": "tests"
     }
   },
   "prefer-stable": true

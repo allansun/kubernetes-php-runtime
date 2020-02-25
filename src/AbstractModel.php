@@ -110,7 +110,7 @@ abstract class AbstractModel implements ModelInterface
         if ($this->isRawObject) {
             $arrayCopy = $this->rawData;
         } else {
-            $properties = self::$PropertyInfoExtractor->getProperties($this);
+            $properties = self::$PropertyInfoExtractor->getProperties(get_class($this));
             foreach ($properties as $property) {
                 if (property_exists($this, $property) && null !== $this->$property) {
                     $propertyName = $property;

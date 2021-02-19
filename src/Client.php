@@ -82,8 +82,9 @@ class Client
             ];
         }
 
+        // Append to Handler Stack given, or create a new one.
+        $HandlerStack = $guzzleOptions['handler'] ?? GuzzleHttp\HandlerStack::create();
         // Setup logging bit
-        $HandlerStack = GuzzleHttp\HandlerStack::create();
         $HandlerStack->push(
             GuzzleHttp\Middleware::log(
                 Logger::getInstance()->getLogger(),

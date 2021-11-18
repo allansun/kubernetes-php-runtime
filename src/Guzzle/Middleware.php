@@ -4,13 +4,13 @@
 namespace KubernetesRuntime\Guzzle;
 
 
-use GuzzleHttp\Psr7;
+use GuzzleHttp\Psr7\Utils;
 use KubernetesRuntime\APIPatchOperation;
 use Psr\Http\Message\RequestInterface;
 
 final class Middleware
 {
-    public static function setPatchOperation()
+    public static function setPatchOperation(): callable
     {
         return function (callable $handler) {
             return function (RequestInterface $request, array $options) use ($handler) {
@@ -33,7 +33,7 @@ final class Middleware
 
                         unset($requestBody['patchOperation']);
 
-                        $modify['body'] = Psr7\stream_for(\GuzzleHttp\json_encode($requestBody));
+                        $modify['body'] = Utils::streamFor(\GuzzleHttp\json_encode($requestBody));
 
                     } else {
                         $contentType = APIPatchOperation::CONTENT_TYPE[APIPatchOperation::PATCH];
@@ -41,7 +41,7 @@ final class Middleware
                     $modify['set_headers']['Content-Type'] = $contentType;
                 }
 
-                return $handler(Psr7\modify_request($request, $modify), $options);
+                return $handler(Utils::modifyRequest($request, $modify), $options);
             };
         };
     }

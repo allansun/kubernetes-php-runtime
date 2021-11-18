@@ -1,41 +1,42 @@
 {
-  "name": "kubernetes/php-runtime",
-  "description": "Runtime for kubernetes/php-client",
-  "license": "MIT",
-  "keywords": [
-    "kubernetes",
-    "docker",
-    "runtime"
-  ],
-  "authors": [
-    {
-      "name": "Allan Sun",
-      "email": "allan.sun@bricre.com"
-    }
-  ],
-  "require": {
-    "php": ">=7.2",
-    "ext-json": "*",
-    "guzzlehttp/guzzle": "^6|^7",
-    "monolog/monolog": "@stable",
-    "symfony/property-info": "^4|^5",
-    "phpdocumentor/reflection-docblock": "^3.0|^4.0|^5.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~9"
-  },
-  "conflict": {
-    "phpdocumentor/reflection-docblock": "<3.2.2"
-  },
-  "autoload": {
-    "psr-4": {
-      "KubernetesRuntime\\": "src"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "KubernetesRuntime\\Tests\\": "tests"
-    }
-  },
-  "prefer-stable": true
+    "name": "kubernetes/php-runtime",
+    "description": "Runtime for kubernetes/php-client",
+    "license": "MIT",
+    "keywords": [
+        "kubernetes",
+        "docker",
+        "runtime"
+    ],
+    "authors": [
+        {
+            "name": "Allan Sun",
+            "email": "allan.sun@bricre.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5||^8.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6|^7",
+        "monolog/monolog": "@stable",
+        "symfony/property-info": "^4|^5",
+        "phpdocumentor/reflection-docblock": "^3.0|^4.0|^5.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9"
+    },
+    "conflict": {
+        "phpdocumentor/reflection-docblock": "<3.2.2",
+        "psr/log": ">=2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "KubernetesRuntime\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "KubernetesRuntime\\Tests\\": "tests"
+        }
+    },
+    "prefer-stable": true
 }

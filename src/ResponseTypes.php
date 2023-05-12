@@ -397,6 +397,9 @@ class ResponseTypes
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
             '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
         ],
+        'deleteCoreV1CollectionNamespacedService' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
         'patchCoreV1NamespacedService' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Core\\V1\\Service',
         ],

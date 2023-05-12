@@ -2225,6 +2225,43 @@ class ResponseTypes
         'patchExtensionsV1beta1NamespacedIngressStatus' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Extensions\\V1beta1\\Ingress',
         ],
+        'listNetworkingV1NamespacedIngress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\IngressList',
+        ],
+        'createNetworkingV1NamespacedIngress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+        ],
+        'deleteNetworkingV1CollectionNamespacedIngress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'readNetworkingV1NamespacedIngress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+        ],
+        'replaceNetworkingV1NamespacedIngress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+        ],
+        'deleteNetworkingV1NamespacedIngress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+            '202.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\Status',
+        ],
+        'patchNetworkingV1NamespacedIngress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+        ],
+        'readNetworkingV1NamespacedIngressStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+        ],
+        'replaceNetworkingV1NamespacedIngressStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+        ],
+        'patchNetworkingV1NamespacedIngressStatus' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+            '201.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Networking\\V1\\Ingress',
+        ],
         'listExtensionsV1beta1NamespacedNetworkPolicy' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Api\\Extensions\\V1beta1\\NetworkPolicyList',
         ],
@@ -2345,6 +2382,9 @@ class ResponseTypes
         'watchExtensionsV1beta1IngressListForAllNamespaces' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
+        'watchNetworkingV1IngressListForAllNamespaces' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
         'watchExtensionsV1beta1NamespacedDaemonSetList' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
@@ -2361,6 +2401,12 @@ class ResponseTypes
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'watchExtensionsV1beta1NamespacedIngress' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchNetworkingV1NamespacedIngressList' => [
+            '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
+        ],
+        'watchNetworkingV1NamespacedIngress' => [
             '200.' => '\\Kubernetes\\Model\\Io\\K8s\\Apimachinery\\Pkg\\Apis\\Meta\\V1\\WatchEvent',
         ],
         'watchExtensionsV1beta1NamespacedNetworkPolicyList' => [
@@ -3191,4 +3237,3 @@ class ResponseTypes
 
 
 }
-
